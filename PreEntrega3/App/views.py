@@ -11,3 +11,18 @@ def curso(self, nombre, camada):
     return HttpResponse(f"""
         <p> Curso: {curso.nombre} - Camada: {curso.camada} creado!</p>
     """)
+
+def lista_cursos(self):
+    lista = Curso.objects.all()
+    return render(self, "App/lista.html", {"lista_cursos" : lista})
+
+def inicio(self):
+    return render(self, "inicio.html")
+def cursos(self):
+    return HttpResponse("vista de cursos")
+def profesores(self):
+    return HttpResponse("vista de profesores")
+def estudiantes(self):
+    return HttpResponse("vista de estudiantes")
+def entregables(self):
+    return HttpResponse("vista de entregables")
